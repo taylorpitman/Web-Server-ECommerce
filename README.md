@@ -1,6 +1,6 @@
 # Web-Server-ECommerce
 
-![Headshot](./images//headshot..jpg)
+![Head shot](./images//headshot..jpg)
 
 Hello, my name is Taylor Pitman! I am in my final semester at SUNY New Paltz, pursuing a degree in Computer Science. Originally from Middletown, NY, 
 I spent two years in Syracuse, where I earned my Associate’s degree in Computer Science from Onondaga Community College before returning to the Hudson Valley.
