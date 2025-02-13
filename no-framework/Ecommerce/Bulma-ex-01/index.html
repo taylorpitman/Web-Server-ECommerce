@@ -86,35 +86,92 @@
             <div class="container">
                 <div class="columns">
                     <div class="column">
-                        <div class="notification is-success is-light">
-                            This is a primary notification!
-                        </div>
+                      <div v-for="(message, index) in notifications" :key="index" class="notification is-success is-light">
+                        <button class="delete" @click="removeNotification(index)"></button>
+                        {{message}}
+                      </div>
                     </div>
                     <div class="column">
                         <div class="notification is-warning is-light">
+                          <button class='delete'></button>
                             This is a warning notification!
                         </div>
-                    </div>
-                    <div class="column">
                         <div class="notification is-danger is-light">
+                          <button class='delete'></button>
                             This is a danger notification!
                         </div>
                     </div>
+                    <div class="column">
+                        <ul>
+                          <li v-for="item  in cart" :key="item.name">
+                            {{item.name}} - ${{item.price}} x 
+                        </ul>
+                    </div>
                 </div>
             </div>
-        <script 
+        <!-- <script 
             src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
             crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
 
         <script>
+
+            //JQuery
             $(document).ready(function(){
                 $('.navbar-burger').click(function(){
                     $('.navbar-burger').toggleClass('is-active');
                     $('.navbar-menu').toggleClass('is-active');
                 });
             });
+
+            $('.delete').click(function(){
+                $(this).closest('.notification').slideUp();
+            });
+
+
+        </script> -->
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        
+        <script>
+          const {createApp, ref} = Vue;  //Destructuring
+          
+          const app = createApp({  // Fixed: Use object instead of array
+            setup() {
+              const notifications = ref([
+                'This is a primary notification!',
+                'This is a primary notification!',
+                'This is a primary notification!'
+              ]);
+
+              function removeNotification(index) {
+                notifications.value.splice(index, 1);
+              }
+
+              const isOpen = ref(false);
+
+              function toggleMenu() {
+                isOpen.value = !isOpen.value;
+              }
+              
+              const cart = ref([]);
+              
+
+              function addToCart([name, price]) {
+                cart.value.push([name, price, quantity = 1]);
+              }
+              return {
+                notifications,
+                removeNotification,
+                isOpen,
+                toggleMenu
+              };
+            }
+          });
+
+          app.mount('body');
         </script>
-</body>
+
+    </body>
 </html>
