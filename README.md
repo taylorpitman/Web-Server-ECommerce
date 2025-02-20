@@ -37,10 +37,12 @@ I’m looking forward to strengthening my web development skills through this co
         : "~1.11.13" - npm will get the most recent bug fixes of the 1.11 updates 
         : "^1.11.13" - npm will get the most recent minor update since 1.11.13
 
-    # dependencies: 
+    # dev dependencies: 
         These only gets installed on a developers system. Once we launch on a server, these wouldn't be downloaded.
 
         * Nodemon: Monitors files on your disk to make sure when there are updates in javascript, it restarts node for you.
+
+    
 
     # Syntax notes:
         * no commas that dont go anywhere
