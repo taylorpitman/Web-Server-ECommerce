@@ -1,20 +1,15 @@
+
 {
   "name": "web-server-ecommerce",
   "version": "1.0.0",
   "private": true,
-  "description": "![Head shot](./images//headshot..jpg)",
-  "main": "index.js",
+  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/taylorpitman/Web-Server-ECommerce.git"
+  "dependencies": {
+    "express": "^4.21.2",
+    "dayjs": "^1.11.13"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/taylorpitman/Web-Server-ECommerce/issues"
-  },
-  "homepage": "https://github.com/taylorpitman/Web-Server-ECommerce#readme"
+  "license": "ISC"
 }

@@ -15,3 +15,29 @@ Additionally, I created my portfolio website last semester: https://taylorpitman
 skills I’ve learned recently.
 
 I’m looking forward to strengthening my web development skills through this course, especially learning more about Vue as a framework.
+
+
+
+
+## package.json notes
+    * Server package.json is in the root folder (render wants to automatically look for it and we want it to be clear which is our main one)
+    * Client package.json is in out client folder
+    
+    # scripts:
+        This is where you want to put "shortcuts"/commands to put in the terminal to make computation faster and easier
+
+    # dependencies: 
+        This is where we list the name and version of the libraries/frameworks our application depends on
+    
+        # Senver (semantic versioning)
+            * This is the version numbers you see ( ex. 4.21.2)
+                major # - minor # - bugfix #
+
+        :  "1.11.13" - npm will try to obtain that exact version
+        : "~1.11.13" - npm will get the most recent bug fixes of the 1.11 updates 
+        : "^1.11.13" - npm will get the most recent minor update since 1.11.13
+
+
+    # Syntax notes:
+        * no commas that dont go anywhere
+        * variable/object names are quoted

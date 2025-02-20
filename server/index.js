@@ -2,7 +2,6 @@
 
 
 // Single line comment
-
 /*  Multi
     line 
     comment */
@@ -43,7 +42,7 @@ const PORT = 8000;  // PORT number
 // (param1, param2, ..., paramN) => expression
 const server = http.createServer((req, res) => {        // create a server
     res.writeHead(200, {'Content-Type': 'text/plain'});     // write a response to the client
-    res.end('Hello World\n');                               // end the response
+    res.end('Hello New Paltz\n');                               // end the response
 });
 
 /* Async function - a function that returns a promise
@@ -56,6 +55,7 @@ server.listen(PORT, () => { // the server object listens on port 8080
 
 
  //SAME AS ABOVE!
+
 /* const serverRegular = http.createServer(function handler (req, res) {            // create a server
      res.writeHead(200, {'Content-Type': 'text/plain'});     // write a response to the client
      res.end('Hello World\n');                               // end the response
@@ -76,32 +76,9 @@ server.listen(PORT, () => { // the server object listens on port 8080
      return x * x;
  } //same as above but using a regular function */
 
-
-
-
  /* NPM - Node Package Manager 
     (NPM CLI) System within node that its own CLI that manages your node package/program
     (NPM Servers) that host a bunch of packages/services that you can use
     
     Only successful forks of NPM are Yarn(meta) and PNPM(stores files behind the scenes in a different way)
-
-    NPM Commands
-    npm init - creates a package.json file
-    npm install - installs all dependencies in the package.json file
-    npm install <package> - installs a package
-    npm install <package> --save-dev - installs a package as a dev dependency
-    npm install -g <package> - installs a package globally
-    npm uninstall <package> - uninstalls a package
-    npm update - updates all packages
-    npm update <package> - updates a package
-    npm outdated - checks for outdated packages
-    npm run <script> - runs a script from the package.json file
-    npm start - runs the start script from the package.json file
-    npm test - runs the test script from the package.json file
-    npm stop - stops the server
-    npm publish - publishes a package to npm
-    npm login - logs into npm
-    npm logout - logs out of npm
-    npm whoami - checks who you are logged in as
-    npm search <package> - searches for a package
 */ 
